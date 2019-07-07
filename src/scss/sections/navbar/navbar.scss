@@ -1,0 +1,199 @@
+@import '../../components/buttons';
+@import "../../variables";
+@import "../../mixin";
+
+.navbar {
+    width: 100%;
+    background-color: $navbar-backg;
+    padding: 30px 0;
+
+    &-flex {
+        @include flex-between;
+    }
+
+    &-nav {
+        @include flex-between;
+        margin-left: 220px;
+
+        &__item {
+            padding-right: 45px;
+        }
+
+        &__link {
+            font-size: 16px;
+            font-weight: 700;
+            font-family: "Montserrat", sans-serif;
+            color: $main-color;
+
+            &:hover {
+                color: $navbar-hover;
+                transition-duration: 0.4s;
+            }
+        }
+    }
+
+    &-logo {
+        background-repeat: no-repeat;
+        @include flex-center;
+
+        &__text {
+            color: $main-color;
+            font-size: 24px;
+            margin-left: 15px;
+            font-weight: 700;
+            font-family: 'Lato', sans-serif;
+        }
+
+        &:hover .navbar-logo__text{
+            color: $navbar-hover;
+            transition-duration: 0.4s;
+        }
+    }
+    
+    &__btn_buy {
+        padding: 12px 35px;
+        background-color: $main-color;
+        font-size: 16px;
+        font-weight: 700;
+        font-family: "Montserrat", sans-serif;
+        
+        &:hover {
+            color: $main-color;
+            background-color: $navbar-hover;
+            transition-duration: 0.4s;
+        }
+    }
+
+    &-burger {
+        display: none;
+        position: absolute;
+    }
+}
+
+@media only screen and (max-width: 1083px) {
+    .navbar-nav {
+        margin-left: 100px;
+    }
+}
+
+@media only screen and (max-width: 993px) {
+    .navbar {
+        padding: 22px 0 56px 0;
+        &-nav {
+            margin-left: 0;
+            &_position {
+                position: absolute;
+                left: 0;
+                top: 84px;
+                left: 50%;
+                transform: translate(-50%);
+                width: 550px;
+            }
+            &__item {
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .navbar {
+        &-nav {
+            &_position {
+                width: 450px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 481px) {
+    .navbar {
+        padding: 28px 0;
+        &-nav {
+            display: none;
+            top: 123px;
+
+            &_visible {
+                @include flex-column-center;
+            }
+
+            &_position {
+                width: 290px;
+            }
+
+            &__item {
+                margin-right: 0;
+            }
+    
+            &__link {
+                background-color: #333333;
+                border: 0.5px solid rgb(80, 79, 79);
+                padding: 31px 0 36px 33px;
+                width: 290px;
+                font-size: 26px;
+                color: $navbar-hover;
+                display: inline-block;
+                position: relative;
+
+                &:hover::before {
+                    content: "";
+                    width: 8px;
+                    height: 50px;
+                    background-color: $main-color;
+                    position: absolute;
+                    bottom: 24px;
+                    left: -1px;
+                    transition-duration: 1s;
+                }
+
+                &:hover {
+                    color: $main-color;
+                }
+            }
+        }
+    
+        &-logo {
+            padding: 13px 22px;
+    
+            &__text {
+                visibility: hidden;
+                font-size: 0;
+                margin-left: 0;
+            }
+        }
+
+        &-burger {
+            @include flex-column-center;
+            position: static;
+            cursor: pointer;
+            padding: 13px 2px;
+
+            &__inner {
+                background-color: #ffffff;
+                width: 28px;
+                height: 3px;
+                position: relative;
+                border-radius: 2px;
+
+                &::before, &:after{
+                    content: "";
+                    height: 3px;
+                    position: absolute;
+                    background-color: #ffffff;
+                    border-radius: 2px;
+                }
+
+                &::before {
+                    width: 20px;
+                    bottom: 9px;
+                    left: 8px;
+                }
+
+                &:after {
+                    width: 28px;
+                    top: 9px;
+                }
+            }
+        }
+    }
+}

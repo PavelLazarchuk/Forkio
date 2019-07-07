@@ -1,0 +1,17 @@
+@import 'reset';
+@import 'variables';
+@import 'mixin';
+@import 'sections/section';
+@import 'components/components';
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        width: 100%;
+    }
+}
