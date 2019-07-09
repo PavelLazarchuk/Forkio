@@ -22,7 +22,7 @@
         &__link {
             font-size: 16px;
             font-weight: 700;
-            font-family: "Montserrat", sans-serif;
+            font-family: $Montserrat;
             color: $main-color;
 
             &:hover {
@@ -41,7 +41,7 @@
             font-size: 24px;
             margin-left: 15px;
             font-weight: 700;
-            font-family: 'Lato', sans-serif;
+            font-family: $Lato;
         }
 
         &:hover .navbar-logo__text{
@@ -55,7 +55,7 @@
         background-color: $main-color;
         font-size: 16px;
         font-weight: 700;
-        font-family: "Montserrat", sans-serif;
+        font-family: $Montserrat;
         
         &:hover {
             color: $main-color;

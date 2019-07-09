@@ -11,7 +11,7 @@
     &__caption {
         font-size: 82px;
         color: $white;
-        font-family: "Montserrat", sans-serif;
+        font-family: $Montserrat;
         font-weight: 700;
         margin-bottom: 18px;
     }
@@ -20,14 +20,14 @@
         font-size: 30px;
         font-weight: 400;
         color: $main-color;
-        font-family: "Lato", sans-serif;
+        font-family: $Lato;
         margin-bottom: 18px;
     }
 
     &__version {
         font-size: 16px;
         color: #848e97;
-        font-family: "Montserrat", sans-serif;
+        font-family: $Montserrat;
     }
 }
 
