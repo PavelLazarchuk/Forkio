@@ -1,0 +1,140 @@
+@import "../../variables";
+@import "../../mixin";
+
+.testimonials {
+  padding: 90px 0 0 0;
+  background-image: url(../img/testmonials.png);
+  @include background-img;
+  text-align: center;
+
+  &__caption {
+    font-size: 48px;
+    color: $white;
+    font-family: $Montserrat;
+    font-weight: 700;
+    margin-bottom: 80px;
+  }
+
+  &-flex {
+    @include flex-between;
+
+    &__item {
+      margin-bottom: 95px;
+      @include flex-column-center;
+      flex-basis: 27%;
+    }
+
+    &__comment {
+      padding-top: 25px;
+      font-size: 16px;
+      line-height: 24px;
+      color: $white;
+      font-family: $Lato;
+      font-weight: 500;
+      font-style: italic;
+      text-align: center;
+    }
+  }
+
+  &__description {
+    width: 910px;
+    font-size: 14px;
+    line-height: 21px;
+    color: #a291a5;
+    font-family: $Lato;
+    margin: 0 auto 15px auto;
+  }
+
+  &__line {
+    height: 2px;
+    width: 780px;
+    background-color: #a291a5;;
+    margin: 0 auto;
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 993px) {
+  .testimonials {
+    padding: 75px 0 0 0;
+
+    &__caption {
+      font-size: 42px;
+      margin-bottom: 75px;
+    }
+
+    &-flex {
+      &__item {
+        margin-bottom: 50px;
+        flex-basis: 45%;
+      }
+
+      &__comment {
+        padding-top: 35px;
+      }
+    }
+
+    &__description {
+      width: 680px;
+    }
+
+    &__line {
+      width: 640px;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .testimonials {
+    background-size: cover;
+    &__description {
+      width: 560px;
+    }
+
+    &__line {
+      width: 550px;
+    }
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .testimonials {
+    &__description {
+      width: 460px;
+    }
+
+    &__line {
+      width: 450px;
+    }
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .testimonials {
+    background-image: url(../img/testmonials320.png);
+    padding: 60px 0 0 0;
+
+    &-flex {
+      justify-content: center;
+
+      &__item {
+        margin-bottom: 40px;
+        flex-basis: 80%;
+      }
+    }
+
+    &__caption {
+      font-size: 36px;
+      line-height: 48px;
+      margin-bottom: 50px;
+    }
+
+    &__description {
+      display: none;
+    }
+
+    &__line {
+      width: 280px;
+    }
+  }
+}
