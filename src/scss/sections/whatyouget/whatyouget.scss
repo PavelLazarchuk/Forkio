@@ -1,2 +1,173 @@
 @import "../../variables";
 @import "../../mixin";
+
+.whatyouget {
+  background-color: #f4f4f4;
+  padding-top: 84px;
+  margin-top: 70px;
+  font-family: 'Montserrat', sans-serif;
+
+  &__title {
+    font-size: 35px;
+    color: rgba(141, 129, 172, 255);
+    text-align: right;
+    padding: 20px 130px 0 0;
+    position: relative;
+    top: 20px;
+  }
+
+  &-content {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+
+    &-features {
+
+
+      &__feature {
+        display: flex;
+        flex-direction: row;
+        padding: 0 131px 40px 90px;
+
+        &__icon {
+
+          &__first {
+            width: 111px;
+            height: 64px;
+            margin-right: 23px;
+          }
+
+          &__second {
+            width: 90px;
+            height: 80px;
+            margin-right: 44px;
+          }
+
+          &__third {
+            width: 60px;
+            height: 84px;
+            margin-right: 59px;
+            margin-left: 16px;
+          }
+
+          &__fourth {
+            width: 71px;
+            height: 71px;
+            margin-right: 53px;
+            margin-left: 10px;
+          }
+        }
+
+        &__description {
+          width: 250px;
+          line-height: 1.5;
+
+
+          &__title {
+            font-size: 14px;
+            font-weight: normal;
+            color: rgba(50, 50, 50, 255);
+            text-align: left;
+          }
+
+          &__text {
+            font-size: 10px;
+            color: rgba(132, 142, 151, 255);
+            text-align: left;
+            padding-top: 14px;
+          }
+        }
+      }
+    }
+
+
+    &-editor {
+      text-align: right;
+      padding-top: 30px;
+
+      &__image {
+        width: 977px;
+        height: 519px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 993px) {
+  .whatyouget {
+    padding-top: 54;
+
+    &__title {
+      padding: 0;
+      text-align: center;
+      margin-bottom: 80px;
+      top: 0;
+
+    }
+
+
+    &-content {
+      @include flex-center;
+
+      &-features {
+
+
+        &__feature {
+
+
+          &__description {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 481px) {
+
+  .whatyouget {
+
+
+    &__title {
+      font-size: 23px;
+      padding: 0 50px 0 50px;
+    }
+
+
+    &-content {
+
+
+      &-features {
+
+
+        &__feature {
+          display: flex;
+          flex-direction: column;
+          width: 266px;
+          padding: 0 26px 40px 28px;
+
+          &__icon {
+            margin-left: auto;
+            margin-right: auto;
+          }
+
+          &__description {
+
+            &__title {
+              font-size: 12px;
+              padding-top: 30px;
+              text-align: center;
+            }
+
+            &__text {
+              text-align: center;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+
