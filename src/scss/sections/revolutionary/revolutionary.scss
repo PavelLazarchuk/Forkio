@@ -1,2 +1,131 @@
 @import "../../variables";
 @import "../../mixin";
+
+.revolutionary {
+  width: 100%;
+  padding-left: auto;
+  padding-right: auto;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+
+  &-download {
+    position: relative;
+    bottom: 25px;
+
+
+
+    &__button_download {
+      background-color: $main-color;
+      padding: 17px 63px;
+      font-size: 15px;
+      color: rgba(255, 255, 255, 255);
+      border-radius: 50px;
+      font-weight: 700;
+      margin-bottom: 19px;
+    }
+
+    &__description {
+      font-size: 12px;
+      color: rgba(132, 142, 151, 255);
+    }
+
+  }
+
+  &__title {
+    font-size: 40px;
+    color: rgba(99, 92, 115, 255);
+    text-align: center;
+    margin-top: 67px;
+    text-transform: uppercase;
+
+  }
+
+  &__text {
+    font-size: 15px;
+    color: rgba(50, 50, 50, 255);
+    text-align: center;
+    padding: 38px 290px 36px 248px;
+    font-family: "Lato", sans-serif;
+  }
+
+  &-buttons {
+    @include flex-center;
+    justify-content: center;
+
+    &__button {
+      margin-left: 10px;
+      @include flex-center;
+      border: 1px solid rgba(27, 31, 35, .2);
+      border-radius: .25em;
+      cursor: pointer;
+      color: #24292e;
+
+      &__name {
+        font-size: 12px;
+        line-height: 20px;
+        padding: 3px 10px;
+        background-color: #eff3f6;
+        border-right: 1px solid rgba(27, 31, 35, .2);
+      }
+
+      &__quantity {
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 20px;
+        padding: 3px 10px;
+        vertical-align: middle;
+      }
+    }
+  }
+
+
+}
+
+
+@media only screen and (max-width: 993px) {
+
+  .revolutionary {
+
+
+    &__title {
+      font-size: 30px;
+      margin-top: 94px;
+    }
+    &__text {
+      padding: 0 0 0 0;
+      margin: 38px auto 36px auto;
+    }
+  }
+}
+
+
+
+@media only screen and (max-width: 481px) {
+  .revolutionary {
+    padding: 0 15px 0 16px;
+
+    &-download {
+      bottom: 23px;
+
+      &__button_download {
+        font-size: 13px;
+        padding: 15px 31px;
+
+      }
+    }
+
+
+    &__title {
+      font-size: 19px;
+      margin-top: 72px;
+    }
+    &__text {
+      font-size: 10px;
+      margin: 23px auto 14px auto;
+    }
+    &-buttons__button {
+      margin-top: 20px;
+    }
+
+  }
+}
