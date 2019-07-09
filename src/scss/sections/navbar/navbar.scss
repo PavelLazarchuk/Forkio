@@ -111,7 +111,7 @@
         padding: 28px 0;
         &-nav {
             display: none;
-            top: 123px;
+            top: 99px;
 
             &_visible {
                 @include flex-column-center;
@@ -127,7 +127,7 @@
     
             &__link {
                 background-color: #333333;
-                border: 0.5px solid rgb(80, 79, 79);
+                border-bottom: 0.5px solid rgb(80, 79, 79);
                 padding: 31px 0 36px 33px;
                 width: 290px;
                 font-size: 26px;
@@ -153,8 +153,6 @@
         }
     
         &-logo {
-            padding: 13px 22px;
-    
             &__text {
                 visibility: hidden;
                 font-size: 0;
