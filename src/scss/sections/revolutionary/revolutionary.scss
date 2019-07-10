@@ -23,6 +23,10 @@
       font-weight: 700;
       margin-bottom: 19px;
     }
+    &__button_download:hover {
+      background-color: white;
+      color: $main-color;
+    }
 
     &__description {
       font-size: 12px;

@@ -2,10 +2,6 @@
 @import "../../mixin";
 
 
-@import "../../variables";
-@import "../../mixin";
-
-
 .pricing {
   background-image: url("../img/pricing-bg.png");
   background-repeat: no-repeat;
@@ -91,6 +87,11 @@
         &-bigger {
           padding: 21px 63px;
         }
+      }
+
+      &__button:hover {
+        background-color: #d0cbd0;
+        color: rgba(127, 109, 120, 255);
       }
     }
 
