@@ -1,2 +1,169 @@
 @import "../../variables";
 @import "../../mixin";
+
+
+.pricing {
+  background-image: url("../img/pricing-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: 'Montserrat', sans-serif;
+  color: rgba(255, 255, 255, 255);
+  background-color: #4b3b4e;
+  padding-top: 83px;
+
+  &-title {
+    font-size: 35px;
+    text-align: center;
+  }
+
+  &-container {
+    @include flex-center
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+
+
+    &-options {
+      background-color: rgba(255, 255, 255, 0.11);
+      text-align: center;
+      width: 257px;
+      height: 457px;
+      margin: 122px 6px 149px 6px;
+
+
+      &__permonth-biggerpading {
+        padding-bottom: 10px;
+      }
+
+
+      &__name {
+        font-size: 17px;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 46px 63px 34px 64px;
+        font-weight: normal;
+        text-transform: uppercase;
+      }
+
+      &__price {
+        font-size: 40px;
+        font-weight: bold;
+        padding: 32px 0 24px 0;
+
+        &-dollar {
+          font-weight: lighter;
+        }
+      }
+
+      &__permonth {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.3);
+        font-weight: normal;
+        text-transform: uppercase;
+      }
+
+      &__line {
+        background-color: #8d81ac;
+        width: 60px;
+        height: 5px;
+        margin: 39px auto 31px auto;
+      }
+
+      &__license {
+        font-size: 14px;
+        font-weight: normal;
+        padding: 0 36px;
+      }
+
+      &__button {
+        background-color: rgba(255, 255, 255, 0.15);
+        padding: 10px 38px;
+        border-radius: 2px;
+        margin: 37px 0;
+        font-size: 15px;
+        text-transform: uppercase;
+        font-weight: normal;
+
+        &-bigger {
+          padding: 21px 63px;
+        }
+      }
+
+      &__button:hover {
+        background-color: #d0cbd0;
+        color: rgba(127, 109, 120, 255);
+      }
+    }
+
+    &-options-bigger {
+      background-color: rgba(0, 0, 0, 0.3);
+      text-align: center;
+      width: 300px;
+      margin: 0 6px;
+
+
+      &__name {
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: normal;
+        padding: 51px 98px 43px 97px;
+        background-color: rgba(0, 0, 0, 0.11);
+      }
+
+      &__price {
+        font-size: 78px;
+        font-weight: bold;
+        padding: 15px 0 21px 0;
+      }
+
+      &__license {
+        padding: 41px 45px 20px 45px;
+      }
+
+    }
+  }
+}
+
+
+@media only screen and (max-width: 993px) {
+  .pricing {
+    padding-bottom: 80px;
+
+    &-title {
+      font-size: 30px;
+    }
+
+    &-container {
+
+
+      &-options {
+
+        margin: 40px 20px;
+        width: 257px;
+
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 481px) {
+
+  .pricing {
+
+    &-title {
+      font-size: 25px;
+    }
+
+    &-container {
+
+      &-options {
+
+        margin: 15px auto;
+
+      }
+    }
+  }
+
+}
