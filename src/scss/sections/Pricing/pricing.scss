@@ -18,30 +18,24 @@
   }
 
   &-container {
-    @include flex-center
+    @include flex-center;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     padding-top: 5px;
 
 
     &-options {
       background-color: rgba(255, 255, 255, 0.11);
       text-align: center;
-      width: 257px;
+      width: 22%;
       height: 457px;
-      margin: 122px 6px 149px 6px;
-
-
-      &__permonth-biggerpading {
-        padding-bottom: 10px;
-      }
+      margin: 122px 7px 149px;
 
 
       &__name {
-        font-size: 17px;
+        font-size: 17pt;
         background-color: rgba(255, 255, 255, 0.1);
-        padding: 46px 63px 34px 64px;
+        padding: 46px 0 34px 0;
         font-weight: normal;
         text-transform: uppercase;
       }
@@ -51,7 +45,7 @@
         font-weight: bold;
         padding: 32px 0 24px 0;
 
-        &-dollar {
+        &--dollar {
           font-weight: lighter;
         }
       }
@@ -61,6 +55,10 @@
         color: rgba(255, 255, 255, 0.3);
         font-weight: normal;
         text-transform: uppercase;
+
+        &--biggerpading {
+          padding-bottom: 10px;
+        }
       }
 
       &__line {
@@ -73,20 +71,27 @@
       &__license {
         font-size: 14px;
         font-weight: normal;
-        padding: 0 36px;
+        padding: 0 25px;
+        line-height: 1.5;
+        height: 45px;
+
+        &--pading {
+          padding: 0 36px;
+        }
       }
 
       &__button {
         background-color: rgba(255, 255, 255, 0.15);
-        padding: 10px 38px;
+        padding: 12px 41px;
         border-radius: 2px;
-        margin: 37px 0;
-        font-size: 15px;
+        margin: 37px auto;
+        font-size: 11pt;
         text-transform: uppercase;
         font-weight: normal;
 
-        &-bigger {
-          padding: 21px 63px;
+        &--bigger {
+          padding: 12px 56px;
+          font-size: 12pt;
         }
       }
 
@@ -96,15 +101,15 @@
       }
     }
 
-    &-options-bigger {
+    &-options--bigger {
       background-color: rgba(0, 0, 0, 0.3);
       text-align: center;
-      width: 300px;
-      margin: 0 6px;
+      width: 26%;
+      margin: 0;
 
 
       &__name {
-        font-size: 18px;
+        font-size: 18pt;
         text-transform: uppercase;
         font-weight: normal;
         padding: 51px 98px 43px 97px;
@@ -118,7 +123,8 @@
       }
 
       &__license {
-        padding: 41px 45px 20px 45px;
+        padding: 2px 45px 45px;
+        line-height: 1.5;
       }
 
     }
@@ -128,10 +134,19 @@
 
 @media only screen and (max-width: 993px) {
   .pricing {
-    padding-bottom: 80px;
+    padding: 98px 0 80px;
+    margin: 0 auto;
+
+    &-container {
+      padding: 0;
+      margin: 0  auto;
+
+    }
+
+
 
     &-title {
-      font-size: 30px;
+      font-size: 29px;
     }
 
     &-container {
@@ -139,9 +154,11 @@
 
       &-options {
 
-        margin: 40px 20px;
-        width: 257px;
-
+        margin: 42px 20px;
+        width: 35%;
+        &--bigger {
+          width: 40%;
+        }
       }
     }
   }
@@ -151,16 +168,21 @@
 @media only screen and (max-width: 481px) {
 
   .pricing {
+    padding: 71px 0 93px;
 
     &-title {
-      font-size: 25px;
+      font-size: 24px;
+      margin-bottom: 53px;
     }
 
     &-container {
 
       &-options {
-
+        width: 80%;
         margin: 15px auto;
+        &--bigger {
+          width: 90%;
+        }
 
       }
     }
