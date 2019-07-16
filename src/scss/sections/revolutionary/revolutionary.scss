@@ -3,8 +3,7 @@
 
 .revolutionary {
   width: 100%;
-  padding-left: auto;
-  padding-right: auto;
+  padding: 0 auto;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
 
@@ -14,7 +13,7 @@
 
 
 
-    &__button_download {
+    &__button--download {
       background-color: $main-color;
       padding: 17px 63px;
       font-size: 15px;
@@ -24,7 +23,7 @@
       margin-bottom: 19px;
       border: 1px solid lightgrey !important;
     }
-    &__button_download:hover {
+    &__button--download:hover {
       background-color: white;
       color: $main-color;
     }
@@ -46,10 +45,10 @@
   }
 
   &__text {
-    font-size: 15px;
+    font-size: 15pt;
     color: rgba(50, 50, 50, 255);
     text-align: center;
-    padding: 38px 290px 36px 248px;
+    padding: 38px 150px 36px 150px;
     font-family: "Lato", sans-serif;
     line-height: 1.5;
   }
@@ -57,29 +56,45 @@
   &-buttons {
     @include flex-center;
     justify-content: center;
+    font-weight: bold;
+    font-size: 10px;
 
-    &__button {
+
+
+    &-button {
       margin-left: 10px;
       @include flex-center;
-      border: 1px solid rgba(27, 31, 35, .2);
       border-radius: .25em;
       cursor: pointer;
       color: #24292e;
 
+      &-button:hover {
+        border: 1px solid grey;
+      }
+
       &__name {
-        font-size: 12px;
         line-height: 20px;
         padding: 3px 10px;
         background-color: #eff3f6;
-        border-right: 1px solid rgba(27, 31, 35, .2);
+        border: 1px solid rgba(27, 31, 35, .2);
+
+        &:hover {
+          border: 1px solid rgba(27, 31, 35, .4);
+          background-color: rgba(236, 240, 241, 1);
+        }
       }
 
+
       &__quantity {
-        font-size: 12px;
         font-weight: 600;
         line-height: 20px;
         padding: 3px 10px;
         vertical-align: middle;
+        border: 1px solid rgba(27, 31, 35, .2);
+
+      }
+      &__quantity:hover {
+        color: blue;
       }
     }
   }
@@ -91,7 +106,12 @@
 @media only screen and (max-width: 993px) {
 
   .revolutionary {
+    padding: 0;
+    margin: 0 auto;
 
+    &-buttons {
+      margin: 0 auto;
+    }
 
     &__title {
       font-size: 30px;
@@ -99,7 +119,7 @@
     }
     &__text {
       padding: 0 0 0 0;
-      margin: 38px auto 36px auto;
+      margin: 38px 50px 36px;
     }
   }
 }
@@ -108,28 +128,38 @@
 
 @media only screen and (max-width: 481px) {
   .revolutionary {
-    padding: 0 15px 0 16px;
+    padding: 0 auto;
 
     &-download {
       bottom: 23px;
 
-      &__button_download {
+      &__button--download {
         font-size: 13px;
-        padding: 15px 31px;
+        padding: 15px auto;
 
+      }
+    }
+
+    &-buttons {
+      margin: 0 auto;
+
+      &-button {
+        width: 40%;
       }
     }
 
 
     &__title {
       font-size: 19px;
-      margin-top: 72px;
+      margin-top: 52px;
     }
     &__text {
-      font-size: 10px;
-      margin: 23px auto 14px auto;
+      font-size: 12px;
+      margin: 23px auto 14px;
+      width: 250px;
+
     }
-    &-buttons__button {
+    &-buttons-button {
       margin-top: 20px;
     }
 
