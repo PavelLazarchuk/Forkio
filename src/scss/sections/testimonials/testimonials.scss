@@ -15,9 +15,11 @@
     margin-bottom: 80px;
   }
 
-  &-flex {
+  &__flex {
     @include flex-between;
+  }
 
+  &-flex {
     &__item {
       margin-bottom: 95px;
       @include flex-column-center;
@@ -54,7 +56,7 @@
   }
 }
 
-@media only screen and (max-width: 993px) {
+@media only screen and (max-width: 992px) {
   .testimonials {
     padding: 75px 0 0 0;
 
@@ -109,14 +111,16 @@
   }
 }
 
-@media only screen and (max-width: 481px) {
+@media only screen and (max-width: 480px) {
   .testimonials {
     background-image: url(../img/testmonials320.png);
     padding: 60px 0 0 0;
 
-    &-flex {
+    &__flex {
       justify-content: center;
+    }
 
+    &-flex {
       &__item {
         margin-bottom: 40px;
         flex-basis: 80%;
