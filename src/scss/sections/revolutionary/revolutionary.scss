@@ -21,13 +21,11 @@
       border-radius: 50px;
       font-weight: 700;
       margin-bottom: 19px;
+      border: 1px solid lightgrey !important;
     }
     &__button--download:hover {
       background-color: white;
       color: $main-color;
-      border: 1px solid lightgrey !important;
-
-
     }
 
     &__description {
