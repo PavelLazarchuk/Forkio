@@ -103,7 +103,7 @@
 }
 
 
-@media only screen and (max-width: 993px) {
+@media only screen and (max-width: 992px) {
 
   .revolutionary {
     padding: 0;
@@ -126,7 +126,7 @@
 
 
 
-@media only screen and (max-width: 481px) {
+@media only screen and (max-width: 480px) {
   .revolutionary {
     padding: 0 auto;
 
@@ -141,10 +141,11 @@
     }
 
     &-buttons {
-      margin: 0 auto;
+      margin: 0 50px;
+
 
       &-button {
-        width: 40%;
+        margin-top: 20px;
       }
     }
 
@@ -159,9 +160,42 @@
       width: 250px;
 
     }
-    &-buttons-button {
-      margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 366px) {
+  .revolutionary {
+    padding: 0 auto;
+
+    &-download {
+      bottom: 23px;
+
+      &__button--download {
+        font-size: 13px;
+        padding: 15px auto;
+
+      }
     }
 
+    &-buttons {
+      margin: 0 50px;
+
+
+      &-button {
+        margin-top: 20px;
+      }
+    }
+
+
+    &__title {
+      font-size: 19px;
+      margin-top: 52px;
+    }
+    &__text {
+      font-size: 12px;
+      margin: 23px auto 14px;
+      width: 250px;
+
+    }
   }
 }
