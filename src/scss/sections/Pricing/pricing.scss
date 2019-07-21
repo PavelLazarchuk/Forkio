@@ -154,7 +154,8 @@
       &-options {
 
         margin: 42px 20px;
-        width: 257px;
+        width: 40%;
+        max-width: 257px;
 
         &--bigger {
           width: 299px;
@@ -249,12 +250,16 @@
 
 
       &-options {
+        margin: 42px 5px;
+        width: 195px;
 
-        margin: 42px 10px;
-        width: 184px;
+
+        &__name {
+          font-size: 12pt;
+        }
 
         &--bigger {
-          width: 250px;
+          width: 255px;
         }
       }
     }
@@ -278,6 +283,8 @@
       &-options {
         width: 257px;
         margin: 15px auto;
+
+
         &--bigger {
           width: 299px;
         }
